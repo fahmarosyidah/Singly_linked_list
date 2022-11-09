@@ -64,6 +64,7 @@ namespace Singly_linked_list
             nodeBaru.next = current;
             previous.next = nodeBaru;
         }
+
         /*Method untuk menghapus node tertentu di dalam list*/
         public bool delNode(int nim)
         {
@@ -77,6 +78,24 @@ namespace Singly_linked_list
             if (current == START)
                 START = START.next;
             return true;
+        }
+
+        /*Method untuk menge-check apakah node yang dimaksud ada di dalam list*/
+        public bool Search(int nim, ref Node previous, ref Node current)
+        {
+            previous = START;
+            current = START;
+
+            while ((current != null) && (nim != current.noMhs))
+            {
+                previous = current;
+                current = current.next;
+            }
+
+            if (current == null)
+                return (false);
+            else
+                return (true);
         }
     }
     class Program
