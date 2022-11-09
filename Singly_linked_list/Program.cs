@@ -9,6 +9,15 @@ namespace Singly_linked_list
         public Node next;
     }
 
+    class List
+    {
+        Node START;
+
+        public List()
+        {
+            START = null;
+        }
+    }
     class Program
     { 
         static void Main(string[] args)
