@@ -54,10 +54,15 @@ namespace Singly_linked_list
                 if (nim == current.noMhs)
                 {
                     Console.WriteLine("\nNomer mahasiswa sama tidak diizinkan\n");
+                    return;
                 }
                 previous = current;
                 current = current.next;
             }
+
+            /*Node baru akan ditempatkan diantara previous dan current*/
+            nodeBaru.next = current;
+            previous.next = nodeBaru;
         }
     }
     class Program
