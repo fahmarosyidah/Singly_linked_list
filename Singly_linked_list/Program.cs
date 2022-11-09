@@ -43,6 +43,21 @@ namespace Singly_linked_list
                 START = nodeBaru;
                 return;
             }
+
+            /*Menemukan lokasi node baru di dalam list*/
+            Node previous, current;
+            previous = START;
+            current = START;
+
+            while ((current != null) && (nim >= current.noMhs))
+            {
+                if (nim == current.noMhs)
+                {
+                    Console.WriteLine("\nNomer mahasiswa sama tidak diizinkan\n");
+                }
+                previous = current;
+                current = current.next;
+            }
         }
     }
     class Program
