@@ -107,10 +107,18 @@ namespace Singly_linked_list
             {
                 Console.WriteLine("\nData di dalam list adalah: \n");
                 Node curretntNode;
-                for (curretntNode = START; curretntNode != null, curretntNode = curretntNode.next)
+                for (curretntNode = START; curretntNode != null; curretntNode = curretntNode.next)
                     Console.Write(curretntNode.noMhs + " " + curretntNode.nama + "\n");
                 Console.WriteLine();
             }
+        }
+
+        public bool ListEmpty()
+        {
+            if (START == null)
+                return true;
+            else
+                return false;
         }
     }
     class Program
