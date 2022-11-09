@@ -97,6 +97,21 @@ namespace Singly_linked_list
             else
                 return (true);
         }
+
+        /*Method untuk Traverse/mengunjungi dan membaca isi list*/
+        public void traverse()
+        {
+            if (ListEmpty())
+                Console.WriteLine("\nList kosong.");
+            else
+            {
+                Console.WriteLine("\nData di dalam list adalah: \n");
+                Node curretntNode;
+                for (curretntNode = START; curretntNode != null, curretntNode = curretntNode.next)
+                    Console.Write(curretntNode.noMhs + " " + curretntNode.nama + "\n");
+                Console.WriteLine();
+            }
+        }
     }
     class Program
     { 
