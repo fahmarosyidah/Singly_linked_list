@@ -30,6 +30,19 @@ namespace Singly_linked_list
             Node nodeBaru = new Node();
             nodeBaru.noMhs = nim;
             nodeBaru.nama = nm;
+
+            /*Node ditambahkan sebagai node*/
+            if (START == null || nim <= START.noMhs)
+            {
+                if ((START != null) && (nim == START.noMhs))
+                {
+                    Console.WriteLine("\nNomer mahasiswa sama tidak diizinkan\n");
+                    return;
+                }
+                nodeBaru.next = START;
+                START = nodeBaru;
+                return;
+            }
         }
     }
     class Program
